@@ -98,18 +98,17 @@ if __name__ == "__main__":
 
     logging.basicConfig(level=logging.INFO)
     random.seed(time.time_ns())
+
+    # Instrument the requests library
     RequestsInstrumentor().instrument()
 
+    # Set up exporting
     resource = Resource(attributes={
         SERVICE_NAME: "fake-rbac"
     })
-    labels = {
-        "service.name": "fake-rbac",
-        "service.version": "0.0.1",
-    }
-    # Set up exporting
+    # Configure the provider with the service name
     provider = TracerProvider(resource=resource)
-    # We need to provide the /v1/traces part when we use the http-exporter on port 4317
+    # We need to provide the /v1/traces part when we use the http-exporter on port 4318
     # For the grpc endpoint on port 4317, this is not needed.
     processor = BatchSpanProcessor(OTLPSpanExporter(endpoint="http://localhost:4317"))
     provider.add_span_processor(processor)

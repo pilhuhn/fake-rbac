@@ -1,0 +1,9 @@
+= README
+
+This is a sample project to illustrate some aspects of using https://opentelemetry.io/docs/instrumentation/python/[OpenTelemetry in Python].
+
+This is basically the source code of my "Distributed Tracing with Quarkus, Python, Open Telemetry and Jaeger" series of articles.
+
+server-minimal.py is the code from https://medium.com/@pilhuhn/distributed-tracing-with-quarkus-python-open-telemetry-and-jaeger-part-1-2d83f761b786
+
+server.py is the full code of both parts
