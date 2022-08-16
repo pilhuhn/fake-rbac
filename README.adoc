@@ -7,3 +7,10 @@ This is basically the source code of my "Distributed Tracing with Quarkus, Pytho
 server-minimal.py is the code from https://medium.com/@pilhuhn/distributed-tracing-with-quarkus-python-open-telemetry-and-jaeger-part-1-2d83f761b786
 
 server.py is the full code of both parts
+
+kaf-relay.py is the code for the third part of the series
+
+== Posts
+
+https://itnext.io/distributed-tracing-with-quarkus-python-open-telemetry-and-jaeger-part-1-2d83f761b786[Part 1],
+https://itnext.io/distributed-tracing-with-quarkus-python-open-telemetry-and-jaeger-part-2-d533e3a83703[Part 2]

@@ -1,3 +1,5 @@
+
+from kafka import KafkaConsumer, KafkaProducer
 from kafka.consumer.fetcher import ConsumerRecord
 from opentelemetry import trace
 from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
@@ -6,7 +8,6 @@ from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import (BatchSpanProcessor)
 from opentelemetry.trace import SpanContext, TraceFlags, NonRecordingSpan
 
-from kafka import KafkaConsumer, KafkaProducer
 import logging
 import random
 import re
